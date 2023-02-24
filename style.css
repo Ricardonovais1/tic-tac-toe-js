@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #6EC487;
+    --secondary-color: #1F7036;
+    --third-color: #1f7036a6;
+    --primary-font: 'Montserrat', sans-serif;
+
+}
+
+body, html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: var(--primary-color);
+    height: 100%;
+}
+
+.title {
+    font-family: var(--primary-font);
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+}
+
+
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    /* border: 3px solid var(--secondary-color); */
+}
+
+.square:nth-child(3n) {
+    border-left: 5px solid var(--third-color);
+}
+
+.square:nth-child(2),
+.square:nth-child(5),
+.square:nth-child(8) {
+    border-left: 5px solid var(--third-color);
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3),
+.square:nth-child(4),
+.square:nth-child(5),
+.square:nth-child(6) {
+    border-bottom: 5px solid var(--third-color);
+}
+
+
+.mark {
+    max-height: 90px;
+}
+
+.result {
+    font-family: var(--primary-font);
+    font-size: 2rem;
+    color: var(--third-color);
+}
