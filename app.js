@@ -1,5 +1,8 @@
 const board = document.querySelector('.board');
 const result = document.querySelector('.result');
+const newGame = document.querySelector('.new-game');
+const title = document.querySelector('.title');
+
 
 const CIRCLE = './img/Jogo-da-velha-O.png';
 const CROSS = './img/Jogo-da-velha-X.png';
@@ -100,7 +103,14 @@ const checkWin = () => {
 const endGame = () => {
     squares.forEach(square => {
         square.removeEventListener('click', handleClicks)
+        newGame.classList.remove('hide');
+        title.classList.add('hide');
     })
 } 
+
+newGame.addEventListener('click', ()  => {
+    location.reload()
+})
+
 console.log(board[0])
 

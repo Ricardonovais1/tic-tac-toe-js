@@ -19,7 +19,8 @@ body, html {
     align-items: center;
     gap: 3rem;
     background-color: var(--primary-color);
-    height: 100%;
+    height: 100vh;
+    transition: ease 0.5s;
 }
 
 .title {
@@ -40,18 +41,17 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
-    /* border: 3px solid var(--secondary-color); */
+    background-color: rgb(214, 214, 214);
 }
 
 .square:nth-child(3n) {
-    border-left: 5px solid var(--third-color);
+    border-left: 5px solid var(--primary-color);
 }
 
 .square:nth-child(2),
 .square:nth-child(5),
 .square:nth-child(8) {
-    border-left: 5px solid var(--third-color);
+    border-left: 5px solid var(--primary-color);
 }
 
 .square:nth-child(1),
@@ -60,7 +60,7 @@ body, html {
 .square:nth-child(4),
 .square:nth-child(5),
 .square:nth-child(6) {
-    border-bottom: 5px solid var(--third-color);
+    border-bottom: 5px solid var(--primary-color);
 }
 
 
@@ -72,4 +72,23 @@ body, html {
     font-family: var(--primary-font);
     font-size: 2rem;
     color: var(--third-color);
+}
+
+.hide {
+    display: none;
+}
+
+.new-game {
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: .8rem 1.5rem;
+    border: none;
+    border-radius: .3rem;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.new-game:hover {
+    transform: scale(1.05);
 }
