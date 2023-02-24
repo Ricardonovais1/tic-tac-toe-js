@@ -53,6 +53,12 @@
     };
 
     const checkWin = () => {
+
+        if (gameboard.every(item => item == "X" || item == "O")) {
+            result.textContent = "Empate..."
+            endGame()
+        }
+
         if (((gameboard[0] === gameboard[1] && gameboard[1] === gameboard[2]) && gameboard[2] === 'X') ||
             ((gameboard[3] === gameboard[4] && gameboard[4] === gameboard[5]) && gameboard[5] === 'X') ||
             ((gameboard[6] === gameboard[7] && gameboard[7] === gameboard[8]) && gameboard[8] === 'X')) 
@@ -99,6 +105,7 @@
                 result.textContent = 'O Ganhou';
                 endGame()
             } 
+        
     }
 
     const endGame = () => {
